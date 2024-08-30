@@ -1,0 +1,3 @@
+#banner{position: relative;background: url("/public/image/pexels-vladbagacian-2819587.jpg")no-repeat center;background-size: cover;width: 100%;min-height: 100vh;}
+#banner .text{position: absolute;bottom: 10px;background-color: rgba(0, 0, 0, 0.308);}
+#banner .text .title, #banner .text p{color: white;}

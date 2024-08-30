@@ -1,0 +1,44 @@
+@import'./variaveis.css';@import'./header.css';@import'./banner.css';@import'./slider.css';@import'./footer.css';
+
+/*Geral*/
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: var(--font-text);font-size: 16px;color: var(--color-text);text-decoration: none;list-style: none;scroll-behavior: smooth;}
+.text{max-width: 900px;margin-left: 20px;margin-right: 20px;background-color: #999;padding: 30px;}
+img{width: 100%;height: 100%;object-fit: cover;}
+.title{font-size: 1.9em;font-weight: 600;margin-bottom: 30px;}
+.header{text-align: center;margin: 30px 0;}
+.estadia,.pousada{display: block;color: var(--color-destaque);font-weight: bold;text-transform:capitalize;}
+/*Seção*/
+#pacotes {display: flex;flex-direction: column;justify-content: center;align-items: center;flex-wrap: wrap;}
+#destaque,.card-pacotes, #blogs{display:flex;flex-wrap: wrap;}
+#blogs{display: flex;justify-content: center;align-items: center;}
+#blogs .card,#pacotes .card{margin: 15px;}
+#slide{width: 100%;min-height: 80vh;}
+#sobre{position: relative; max-width: 100%;margin: 20px 0;padding: 30px;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+/* Estilos do card */
+.card {position: relative;background-color: white;border-radius: 8px;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);width: 300px;margin: 5px auto;overflow: hidden;}
+.card.new::before{content: "NEW";position: absolute;top:10px;left: -40px;background-color: #45a049;font-size: 12px;font-weight: bold;padding: 5px 40px;transform: rotate(-45deg);color: #ddd;}
+.card-image {height: 200px;background-size: cover;background-position: center;}
+.card-content {padding: 20px;}
+.card-title {font-size: 1.5em;font-weight: bold;margin-bottom: 10px;}
+.card-price {font-size: 18px;color: #333;margin-bottom: 10px;font-weight: bold;}
+.card-description {font-size: 14px;color: #666;margin-bottom: 20px;}
+.card-button {display: block;background-color: var(--color-destaque);color: white;text-align: center;padding: 10px 20px;border-radius: 4px;text-decoration: none;transition: background-color 0.3s ease;margin-top: 10px;}
+.card-button:hover {background-color: #658147;}
+/*Estilo Marquee*/
+.marquee-container {width: 100%;overflow: hidden;white-space: nowrap;background-color: #333;}
+.marquee-content {display: inline-block;padding-left: 100%;animation: marquee 10s linear infinite;font-size: 2rem;font-weight: bold;}
+.marquee-content span {display: inline-block;padding-right: 2rem;color: #ddd;}
+
+@keyframes marquee {0% { transform: translateX(0); }100% { transform: translateX(-100%); }}
+@media (max-width:991px){
+    header{padding: 20px;justify-content: end;}
+    header .navbar{display: none;}
+    header .navbar .logo{display: none;}
+    header .navbar.active{position: fixed;top:0;left: 0;width: 100%;height: 400px;background-color: var(--color-text);display: flex;justify-content: center;align-items: center;flex-direction: column;}
+    header ul li{margin: 10px 0;}
+    header ul li a{margin-left: 0;}
+    .menu{position: relative;top: 0;right: 20px;width: 40px;height: 40px;background: var(--menu-open);background-size: 30px;cursor: pointer;z-index: 1;}
+    .menu.active{position: fixed;right: 0; background: var(--menu-close);background-size: 30px;}
+    header .logo-top{display: -webkit-box; height: 60px;}
+    footer .row .box{width: 100%;}
+}

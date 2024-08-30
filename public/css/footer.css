@@ -1,0 +1,10 @@
+footer{position:relative;padding:70px 0;display:block;background-color:var(--color-destaque);}
+footer .row{display:flex;flex-wrap:wrap;}
+.row .box p{color: white;}
+.row .box{width:25%;padding:0 15px;}
+.row .box a{color: white;}
+.row .social{display:grid;grid-template-columns: repeat(4,50px);margin-top: 20px;}
+.social li a img{display:inline-block;width:36px;height:36px;display: grid;justify-content: center;align-items:center;padding:8px;background:white;}
+.ref{position: relative;display: flex;justify-content: center;align-items: center;padding: 50px 0;}
+.ref a{padding-right: 10px;color: white;}
+.copyright{position: absolute;bottom: 0;width: 100%;padding: 20px;background-color: #45a049;color: White;text-align: center;}
